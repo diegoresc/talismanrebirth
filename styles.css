@@ -67,6 +67,7 @@ header {
     letter-spacing: 1px;
     transition: all 0.3s;
     padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
 .navbar a:hover {
@@ -77,6 +78,11 @@ header {
 .btn-register {
     border: 2px solid var(--gold);
     border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-register:hover {
+    background: rgba(255, 215, 0, 0.1);
 }
 
 .btn-login {
@@ -450,7 +456,7 @@ footer {
 /* ============ MODAL LOGIN/REGISTRO ============ */
 
 .modal {
-    display: none;
+    display: none !important;
     position: fixed;
     z-index: 2000;
     left: 0;
@@ -463,18 +469,18 @@ footer {
 }
 
 .modal.show {
-    display: flex;
+    display: flex !important;
 }
 
 .modal-content {
-    background: linear-gradient(135deg, rgba(139, 46, 139, 0.9) 0%, rgba(10, 14, 39, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(139, 46, 139, 0.95) 0%, rgba(10, 14, 39, 0.98) 100%);
     border: 3px solid var(--orange);
     border-radius: 10px;
     padding: 3rem;
     width: 90%;
     max-width: 400px;
     position: relative;
-    box-shadow: 0 0 50px rgba(255, 107, 53, 0.5);
+    box-shadow: 0 0 50px rgba(255, 107, 53, 0.8);
 }
 
 .modal-content h2 {
@@ -483,12 +489,17 @@ footer {
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-size: 1.8rem;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .modal-content input {
-    width: 100%;
     padding: 12px;
-    margin-bottom: 1rem;
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid var(--orange);
     color: var(--text);
@@ -507,7 +518,6 @@ footer {
 }
 
 .btn-modal {
-    width: 100%;
     padding: 12px;
     background: linear-gradient(135deg, var(--orange), #ff8c42);
     border: 2px solid var(--gold);
@@ -530,6 +540,7 @@ footer {
     text-align: center;
     margin-top: 1.5rem;
     color: var(--gray);
+    font-size: 0.95rem;
 }
 
 .modal-content a {
@@ -537,10 +548,12 @@ footer {
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 .modal-content a:hover {
     text-decoration: underline;
+    color: var(--orange);
 }
 
 .close {
@@ -556,6 +569,7 @@ footer {
 
 .close:hover {
     color: var(--orange);
+    transform: scale(1.2);
 }
 
 /* ============ RESPONSIVO ============ */
