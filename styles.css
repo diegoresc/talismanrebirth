@@ -283,11 +283,15 @@ section h2 {
     gap: 2.5rem;
 }
 .class-card {
-    background: #2a0f3a;
-    border: 2px solid orange;
-    border-radius: 10px;
-    padding: 20px;
+    background: linear-gradient(135deg, rgba(139, 46, 139, 0.3) 0%, rgba(255, 107, 53, 0.1) 100%);
+    border: 2px solid var(--orange);
+    border-radius: 8px;
+    padding: 2.5rem;
     text-align: center;
+    transition: all 0.3s;
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
+    position: relative;
+    overflow: hidden;
 }
 
 
