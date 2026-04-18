@@ -316,7 +316,11 @@ section h2 {
 .class-card:hover::before {
     opacity: 1;
 }
-
+.class-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .class-icon {
     width: 80px;
     height: 80px;
