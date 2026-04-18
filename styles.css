@@ -7,7 +7,7 @@
 :root {
     --orange: #ff6b35;
     --purple: #8b2e8b;
-    --gold: #ffd700;F
+    --gold: #ffd700;
     --dark: #0a0e27;
     --darker: #050710;
     --text: #e8e8e8;
@@ -98,11 +98,7 @@ header {
 }
 
 /* ============ HERO ============ */
-.hero img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-}
+
 .hero {
     min-height: 100vh;
     background-size: cover;
@@ -334,8 +330,6 @@ section h2 {
     height: 100%;
     object-fit: contain;
 }
-
-}}
 .class-card h3 {
     color: var(--gold);
     font-size: 1.6rem;
