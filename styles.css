@@ -98,7 +98,11 @@ header {
 }
 
 /* ============ HERO ============ */
-
+.hero img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
 .hero {
     min-height: 100vh;
     background-size: cover;
