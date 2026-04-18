@@ -571,7 +571,37 @@ footer {
     color: var(--orange);
     transform: scale(1.2);
 }
+/* ============ CLOSE BUTTON FIXES ============ */
 
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--gold);
+    cursor: pointer;
+    transition: all 0.3s;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.close:hover {
+    color: var(--orange);
+    transform: scale(1.2);
+}
+
+/* Make sure modal content is visible */
+#loginModal,
+#registerModal {
+    display: none;
+}
+
+#loginModal.show,
+#registerModal.show {
+    display: flex;
+}
 /* ============ RESPONSIVO ============ */
 
 @media (max-width: 768px) {
