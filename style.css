@@ -1,6 +1,5 @@
 /* ============================================
    TALISMAN REBIRTH - EPIC GAMING STYLE
-   Inspired by WoW Awakening
    ============================================ */
 
 * {
@@ -25,10 +24,9 @@ html {
 
 body {
     font-family: 'Arial', 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, var(--darker-bg) 0%, #1a0033 50%, var(--dark-bg) 100%);
+    background-color: var(--dark-bg);
     color: var(--text-light);
     overflow-x: hidden;
-    background-attachment: fixed;
 }
 
 .container {
@@ -53,12 +51,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
+    height: 70px;
 }
 
 .logo-left {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .header-logo {
@@ -71,27 +71,35 @@ header {
 nav {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+}
+
+.nav-spacer {
+    flex: 1;
+    height: 1px;
 }
 
 nav a {
     color: var(--text-light);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     transition: all 0.3s ease;
     position: relative;
     padding: 0.5rem 1rem;
+    white-space: nowrap;
 }
 
 nav a::before {
@@ -117,14 +125,18 @@ nav a:hover::before {
 .btn-register {
     border: 2px solid var(--accent);
     border-radius: 3px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem !important;
+}
+
+.btn-register:hover {
+    background: rgba(255, 215, 0, 0.1);
 }
 
 .btn-login {
     background: linear-gradient(135deg, var(--primary), #ff8c42);
     border: 2px solid var(--accent);
     border-radius: 3px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem !important;
     box-shadow: 0 0 15px rgba(255, 107, 53, 0.4);
 }
 
@@ -141,8 +153,6 @@ nav a:hover::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('background.png') center/cover;
-    background-attachment: fixed;
     position: relative;
     overflow: hidden;
     margin-top: 70px;
@@ -154,7 +164,7 @@ nav a:hover::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(5, 7, 16, 0.4) 0%, rgba(26, 0, 51, 0.6) 50%, rgba(10, 14, 39, 0.4) 100%);
+    background: linear-gradient(135deg, rgba(5, 7, 16, 0.5) 0%, rgba(26, 0, 51, 0.7) 50%, rgba(10, 14, 39, 0.5) 100%);
     z-index: 1;
 }
 
@@ -163,7 +173,7 @@ nav a:hover::before {
     position: absolute;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     animation: float 6s ease-in-out infinite;
     top: 5%;
@@ -176,7 +186,7 @@ nav a:hover::before {
     position: absolute;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(139, 46, 139, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(139, 46, 139, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     animation: float 8s ease-in-out infinite reverse;
     bottom: -5%;
@@ -246,25 +256,9 @@ nav a:hover::before {
     animation: fadeInUp 1s ease 0.4s both;
 }
 
-.cta-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s ease;
-}
-
 .cta-button:hover {
     transform: scale(1.1) translateY(-5px);
     box-shadow: 0 0 50px rgba(255, 107, 53, 1), inset 0 0 30px rgba(255, 255, 255, 0.3);
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.cta-button:hover::before {
-    left: 100%;
 }
 
 .cta-button-large {
@@ -314,7 +308,7 @@ section h2 {
 }
 
 .info-section {
-    background: rgba(10, 14, 39, 0.6);
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.8) 0%, rgba(26, 0, 51, 0.6) 100%);
     border-top: 3px solid var(--primary);
     border-bottom: 3px solid var(--secondary);
 }
@@ -333,7 +327,7 @@ section h2 {
    ============================================ */
 
 .classes-section {
-    background: rgba(10, 14, 39, 0.4);
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.6) 0%, rgba(26, 0, 51, 0.4) 100%);
 }
 
 .gallery-grid {
@@ -405,7 +399,7 @@ section h2 {
    ============================================ */
 
 .news-section {
-    background: rgba(10, 14, 39, 0.6);
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.8) 0%, rgba(26, 0, 51, 0.6) 100%);
 }
 
 .news-tabs {
@@ -413,6 +407,7 @@ section h2 {
     justify-content: center;
     gap: 2rem;
     margin-bottom: 3rem;
+    flex-wrap: wrap;
 }
 
 .tab-button {
@@ -473,7 +468,7 @@ section h2 {
    ============================================ */
 
 footer {
-    background: linear-gradient(180deg, rgba(5, 7, 16, 0.9) 0%, rgba(5, 7, 16, 1) 100%);
+    background: linear-gradient(180deg, rgba(5, 7, 16, 0.95) 0%, rgba(5, 7, 16, 1) 100%);
     border-top: 3px solid var(--primary);
     text-align: center;
     padding: 3rem 2rem;
@@ -523,6 +518,30 @@ footer p {
    ============================================ */
 
 @media (max-width: 768px) {
+    header {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 0.5rem;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    .nav-spacer {
+        display: none;
+    }
+
+    nav a {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
     .hero-content h1 {
         font-size: 2.5rem;
         letter-spacing: 3px;
@@ -536,15 +555,6 @@ footer p {
         height: 100px;
     }
 
-    nav ul {
-        gap: 1rem;
-        font-size: 0.85rem;
-    }
-
-    nav a {
-        padding: 0.3rem 0.5rem;
-    }
-
     section h2 {
         font-size: 2rem;
     }
@@ -556,19 +566,5 @@ footer p {
 
     .gallery-grid {
         grid-template-columns: 1fr;
-    }
-
-    header {
-        flex-wrap: wrap;
-        padding: 0.5rem 1rem;
-    }
-
-    nav {
-        width: 100%;
-        margin-top: 0.5rem;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
     }
 }
