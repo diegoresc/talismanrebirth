@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talisman Rebirth</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- HEADER FIXO -->
@@ -14,46 +14,18 @@
                 <img src="logo2.png" alt="Logo" class="header-logo">
             </div>
             
-          <nav class="navbar">
-    <a href="#hero" class="nav-home">HOME</a>
-    <a href="#info">INFO</a>
-    <a href="#classes">CLASSES</a>
-    <a href="#shop">SHOP</a>
-    <a href="#download">DOWNLOAD</a>
-    <a href="#register" class="btn-register">REGISTER</a>
-    <a onclick="openLogin()" class="btn-login">LOGIN</a>
-            </nav> 
+            <nav class="navbar">
+                <a href="#home">HOME</a>
+                <a href="#info">INFO</a>
+                <a href="#classes">CLASSES</a>
+                <a href="#shop">SHOP</a>
+                <a href="#download">DOWNLOAD</a>
+                <a href="#register" class="btn-register">REGISTER</a>
+                <a href="#login" class="btn-login">LOGIN</a>
+            </nav>
         </div>
     </header>
-<!-- MODAL DE LOGIN -->
-<div id="loginModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>LOGIN</h2>
-        <form id="loginForm">
-            <input type="text" id="loginUsername" placeholder="Username" required>
-            <input type="password" id="loginPassword" placeholder="Password" required>
-            <button type="submit" class="btn-modal">LOGIN</button>
-        </form>
-        <p>Não tem conta? <a href="#" onclick="openRegister()">Registre-se aqui</a></p>
-    </div>
-</div>
 
-<!-- MODAL DE REGISTRO -->
-<div id="registerModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>REGISTRO</h2>
-        <form id="registerForm">
-            <input type="text" id="registerUsername" placeholder="Username" required>
-            <input type="email" id="registerEmail" placeholder="Email" required>
-            <input type="password" id="registerPassword" placeholder="Password" required>
-            <input type="password" id="registerPassword2" placeholder="Confirmar Password" required>
-            <button type="submit" class="btn-modal">REGISTRAR</button>
-        </form>
-        <p>Já tem conta? <a href="#" onclick="openLogin()">Faça login aqui</a></p>
-    </div>
-</div>
     <!-- HERO COM BACKGROUND -->
     <section id="hero" class="hero" style="background-image: url('background.png');">
         <div class="hero-overlay"></div>
@@ -62,6 +34,7 @@
             <p>Unleash Your Inner Power</p>
             <div class="hero-buttons">
                 <a href="#play" class="btn-play">PLAY NOW</a>
+                <a href="#purchase" class="btn-purchase">PURCHASE</a>
             </div>
         </div>
     </section>
@@ -91,39 +64,25 @@
         <p>Experience an epic adventure filled with magic, mystery, and unimaginable power. Join thousands of players in a world where legends are born and destinies are forged.</p>
     </section>
 
-<!-- CLASSES -->
-<section id="classes" class="classes">
-    <h2>GAME CLASSES</h2>
-    <div class="classes-grid">
-       <div class="class-card">
-    <div class="class-icon">
-        <img src="tamer.png" alt="Tamer">
-</div>
-    <h3>TAMER</h3>
-        <p>Master of beasts and creatures. Command powerful companions in battle.</p>
-    </div>
-        <div class="class-card">
-            <div class="class-icon">🔮</div>
-            <h3>WIZARD</h3>
-            <p>Controller of magic and arcane forces. Unleash devastating spells.</p>
+    <!-- CLASSES -->
+    <section id="classes" class="classes">
+        <h2>GAME CLASSES</h2>
+        <div class="classes-grid">
+            <div class="class-card">
+                <h3>⚔️ WARRIOR</h3>
+                <p>Master of combat and strength</p>
+            </div>
+            <div class="class-card">
+                <h3>🔥 MAGE</h3>
+                <p>Controller of elemental forces</p>
+            </div>
+            <div class="class-card">
+                <h3>🏹 ARCHER</h3>
+                <p>Master of precision and speed</p>
+            </div>
         </div>
-        <div class="class-card">
-            <div class="class-icon">🗡️</div>
-            <h3>ASSASSIN</h3>
-            <p>Master of stealth and precision. Strike from the shadows with deadly accuracy.</p>
-        </div>
-        <div class="class-card">
-            <div class="class-icon">🥊</div>
-            <h3>MONK</h3>
-            <p>Ancient warrior of discipline. Combine martial arts with spiritual power.</p>
-        </div>
-        <div class="class-card">
-            <div class="class-icon">✨</div>
-            <h3>FAIRY</h3>
-            <p>Mystical being of light. Master of healing and divine magic.</p>
-        </div>
-    </div>
-</section>
+    </section>
+
     <!-- SHOP -->
     <section id="shop" class="shop">
         <h2>SHOP</h2>
