@@ -316,20 +316,13 @@ section h2 {
 .class-card:hover::before {
     opacity: 1;
 }
-.classes .class-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.class-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
 }
 
-.classes .class-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
 .class-card h3 {
     color: var(--gold);
     font-size: 1.6rem;
@@ -347,104 +340,7 @@ section h2 {
     font-size: 0.95rem;
     position: relative;
     z-index: 2;
-}
-/* ============ SHOP ============ */
-
-.shop {
-    background: rgba(10, 14, 39, 0.8);
-    border-top: 3px solid var(--orange);
-    border-bottom: 3px solid var(--purple);
-}
-
-.shop-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.shop-item {
-    background: linear-gradient(135deg, rgba(139, 46, 139, 0.3) 0%, rgba(255, 107, 53, 0.1) 100%);
-    border: 2px solid var(--orange);
-    border-radius: 8px;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.3s;
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
-}
-
-.shop-item:hover {
-    transform: scale(1.05) translateY(-10px);
-    box-shadow: 0 0 40px rgba(255, 107, 53, 0.7);
-    border-color: var(--gold);
-}
-
-.shop-item-header {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.shop-item-header.premium {
-    color: var(--gold);
-    text-shadow: 0 0 10px var(--gold);
-}
-
-.shop-item-header.legendary {
-    color: var(--orange);
-    text-shadow: 0 0 10px var(--orange);
-    animation: glow 2s ease-in-out infinite;
-}
-
-@keyframes glow {
-    0%, 100% {
-        text-shadow: 0 0 10px var(--orange);
-    }
-    50% {
-        text-shadow: 0 0 20px var(--orange), 0 0 30px var(--orange);
-    }
-}
-
-.shop-item h3 {
-    color: var(--gold);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-}
-
-.shop-item .price {
-    color: var(--orange);
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin: 1rem 0;
-}
-
-.shop-item p {
-    color: var(--gray);
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
-}
-
-.btn-buy {
-    display: inline-block;
-    padding: 12px 40px;
-    background: linear-gradient(135deg, var(--orange), #ff8c42);
-    border: 2px solid var(--gold);
-    color: white;
-    font-weight: 800;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s;
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
-}
-
-.btn-buy:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 35px rgba(255, 107, 53, 0.8);
-}
-
-/* ============ DOWNLOAD ============ */
+}/* ============ DOWNLOAD ============ */
 
 .download {
     background: linear-gradient(135deg, rgba(139, 46, 139, 0.4) 0%, rgba(255, 107, 53, 0.2) 100%);
