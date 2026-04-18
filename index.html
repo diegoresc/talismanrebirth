@@ -1,117 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talisman Rebirth - Epic Gaming Experience</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Talisman Rebirth</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HEADER -->
+    <!-- HEADER FIXO -->
     <header>
-        <div class="logo-left">
-            <img src="logo2.png" alt="Talisman Logo" class="header-logo">
+        <div class="header-container">
+            <div class="logo-left">
+                <img src="logo2.png" alt="Logo" class="header-logo">
+            </div>
+            
+            <nav class="navbar">
+                <a href="#home">HOME</a>
+                <a href="#info">INFO</a>
+                <a href="#classes">CLASSES</a>
+                <a href="#download">DOWNLOAD</a>
+                <a href="#register" class="btn-register">REGISTER</a>
+                <a href="#login" class="btn-login">LOGIN</a>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#info">INFO</a></li>
-                <li><a href="#classes">CLASSES</a></li>
-                <li class="nav-spacer"></li>
-                <li><a href="#register" class="btn-register">REGISTER</a></li>
-                <li><a href="#login" class="btn-login">LOGIN</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- HERO SECTION WITH BACKGROUND -->
-    <section id="hero" style="background-image: url('background.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <!-- HERO COM BACKGROUND -->
+    <section id="hero" class="hero" style="background-image: url('background.png');">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>TALISMAN REBIRTH</h1>
             <p>Unleash Your Inner Power</p>
-            
-            <div class="logo-center">
-                <img src="logo.png" alt="Game Logo" class="main-logo">
+            <img src="logo.png" alt="Logo Central" class="hero-logo">
+            <a href="#play" class="btn-play">PLAY NOW</a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="info" class="about">
+        <h2>ABOUT THE GAME</h2>
+        <p>Experience an epic adventure filled with magic, mystery, and unimaginable power. Join thousands of players in a world where legends are born and destinies are forged.</p>
+    </section>
+
+    <!-- CLASSES -->
+    <section id="classes" class="classes">
+        <h2>GAME CLASSES</h2>
+        <div class="classes-grid">
+            <div class="class-card">
+                <h3>⚔️ WARRIOR</h3>
+                <p>Master of combat and strength</p>
             </div>
-            
-            <a href="#play" class="cta-button">PLAY NOW</a>
-        </div>
-    </section>
-
-    <!-- INFO SECTION -->
-    <section id="info" class="info-section">
-        <div class="container">
-            <h2>ABOUT THE GAME</h2>
-            <p>Experience an epic adventure filled with magic, mystery, and unimaginable power. Join thousands of players in a world where legends are born and destinies are forged.</p>
-        </div>
-    </section>
-
-    <!-- CLASSES SECTION -->
-    <section id="classes" class="classes-section">
-        <div class="container">
-            <h2>GAME CLASSES</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-item-content">
-                        <h3>⚔️ WARRIOR</h3>
-                        <p>Master of combat and strength. Dominate the battlefield with unmatched power.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-item-content">
-                        <h3>🔥 MAGE</h3>
-                        <p>Controller of elemental forces. Command magic and bend reality to your will.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-item-content">
-                        <h3>🏹 ARCHER</h3>
-                        <p>Master of precision and speed. Strike from the shadows with deadly accuracy.</p>
-                    </div>
-                </div>
+            <div class="class-card">
+                <h3>🔥 MAGE</h3>
+                <p>Controller of elemental forces</p>
+            </div>
+            <div class="class-card">
+                <h3>🏹 ARCHER</h3>
+                <p>Master of precision and speed</p>
             </div>
         </div>
     </section>
 
-    <!-- DOWNLOAD SECTION -->
-    <section id="download" class="download-section">
-        <div class="container">
-            <h2>READY TO START?</h2>
-            <p>Download now and join the adventure</p>
-            <a href="#" class="cta-button-large">DOWNLOAD NOW</a>
-        </div>
+    <!-- DOWNLOAD -->
+    <section id="download" class="download">
+        <h2>READY TO START?</h2>
+        <p>Download now and join the adventure</p>
+        <a href="#" class="btn-download">DOWNLOAD NOW</a>
     </section>
 
-    <!-- NEWS SECTION -->
-    <section id="news" class="news-section">
-        <div class="container">
-            <h2>LATEST NEWS</h2>
-            <div class="news-tabs">
-                <div class="tab-button active" data-tab="updates">ALL UPDATES</div>
-                <div class="tab-button" data-tab="notices">NOTICES</div>
-                <div class="tab-button" data-tab="events">EVENTS</div>
+    <!-- NEWS -->
+    <section id="news" class="news">
+        <h2>LATEST NEWS</h2>
+        <div class="news-grid">
+            <div class="news-card">
+                <h3>New Expansion!</h3>
+                <p>Explore new lands and unlock powerful abilities</p>
             </div>
-            <div class="news-content">
-                <div class="news-item">
-                    <h3>New Expansion Released!</h3>
-                    <p>Explore new lands, discover ancient secrets, and unlock powerful abilities in the latest expansion.</p>
-                </div>
-                <div class="news-item">
-                    <h3>Server Maintenance Schedule</h3>
-                    <p>All servers will undergo maintenance on Friday. We apologize for any inconvenience.</p>
-                </div>
-                <div class="news-item">
-                    <h3>New Event: Dragon's Awakening</h3>
-                    <p>Face legendary dragons and claim epic rewards in this limited-time event!</p>
-                </div>
+            <div class="news-card">
+                <h3>Server Maintenance</h3>
+                <p>Servers will be down for maintenance on Friday</p>
+            </div>
+            <div class="news-card">
+                <h3>Dragon Event</h3>
+                <p>Face legendary dragons and claim epic rewards</p>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 TALISMAN REBIRTH. All rights reserved. | Crafted with epic proportions</p>
+        <p>&copy; 2026 TALISMAN REBIRTH. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
